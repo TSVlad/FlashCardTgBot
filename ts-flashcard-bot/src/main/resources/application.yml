@@ -1,0 +1,26 @@
+micronaut:
+  application:
+    name: tsFlashcardBot
+datasources:
+  default:
+    url: jdbc:postgresql://localhost:5432/flashcard_db
+    username: root
+    password: root
+    driver-class-name: org.postgresql.Driver
+    db-type: postgres
+    dialect: POSTGRES
+jpa:
+  default:
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: update
+
+business:
+  telegram:
+    bot:
+      username: "@TsFlashCards"
+      path: https://0722-88-201-168-2.eu.ngrok.io
+#      proxyType: SOCKS5
+#      proxyHost: localhost
+#      proxyPort: 9150
